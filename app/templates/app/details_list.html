@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table >
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Age</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+{% for d in details_list %}
+<tr>
+<td><a href="/app/details/{{d.id}}">{{ d.id }}</a></td>
+<td>{{ d.name }}</td>
+<td>{{ d.age }}</td>
+<td>{{ d.email }}</td>
+<td><a href="/app/update/{{d.id}}">update</a></td>
+<td><a href="/app/delete/{{d.id}}">delete</a></td>
+</tr>
+
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>

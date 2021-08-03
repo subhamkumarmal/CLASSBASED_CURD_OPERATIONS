@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/css/table.css' %}">
 </head>
 <body>
-<table >
+<table style="width:73%" >
 <thead>
 <tr>
 <th>Id</th>
 <th>Name</th>
 <th>Age</th>
 <th>Email</th>
+<th><button type="button" class="bton"><a id="bton" href="/app">CREATE</a></button></th>
+
 </tr>
 </thead>
 <tbody>
 {% for d in details_list %}
 <tr>
-<td><a href="/app/details/{{d.id}}">{{ d.id }}</a></td>
-<td>{{ d.name }}</td>
-<td>{{ d.age }}</td>
-<td>{{ d.email }}</td>
-<td><a href="/app/update/{{d.id}}">update</a></td>
-<td><a href="/app/delete/{{d.id}}">delete</a></td>
+<td class="no"><a id="no" href="/app/details/{{d.id}}">{{ d.id }}</a></td>
+<td class="std">{{ d.name }}</td>
+<td class="std">{{ d.age }}</td>
+<td class="std">{{ d.email }}</td>
+<td id="update"><a class="a1" href="/app/update/{{d.id}}">update</a></td>
+<td id="delete"><a class="a1" href="/app/delete/{{d.id}}">delete</a></td>
 </tr>
 
 {% endfor %}

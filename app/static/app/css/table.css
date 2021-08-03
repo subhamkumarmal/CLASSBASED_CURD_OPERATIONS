@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: slategrey;
+}
+
+table{
+    text-align: center;
+    margin-left: 30px;
+    margin-top:50px;
+}
+table, th, td {
+  border: 1px solid black;
+}
+
+#update{
+    background-color: goldenrod;
+
+}
+#delete{
+    background-color: darkred;
+
+}
+.a1{
+    color: white;
+   text-decoration: none;
+}
+
+th{
+    background-color: darkslategray;
+    color: white;
+}
+
+.std{
+    background-color: cadetblue;
+    font-weight: bolder;
+}
+
+.no{
+    background-color: black;
+    color: white;
+}
+
+#no{
+    color: white;
+    text-decoration: none;
+}
+.bton{
+    width: auto;
+    background-color:forestgreen;
+    border-radius: 20px;
+    border:2px solid white;
+}
+#bton{
+    color: white;
+    text-decoration: none;
+}

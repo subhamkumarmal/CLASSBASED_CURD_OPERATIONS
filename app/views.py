@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView,ListView,DetailView,UpdateView,DeleteView
 from .models import Details
 
@@ -7,6 +8,7 @@ from .models import Details
 class CreateDetails(CreateView):
     model = Details
     fields = ('name','age','email')
+    success_url = reverse_lazy('list')
 
 class DetailList(ListView):
     model = Details
@@ -17,6 +19,8 @@ class DetailsViews(DetailView):
 class DetailsUpdata(UpdateView):
     model=Details
     fields = ('name','age','email')
+    success_url = reverse_lazy('list')
 
-class DetailsDelete(DetailsViews):
+class DetailsDelete(DeleteView):
     model = Details
+    success_url = reverse_lazy('list')
